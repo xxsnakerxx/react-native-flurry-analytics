@@ -1,6 +1,6 @@
 {
   "name": "react-native-flurry-analytics",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native wrapper for Flurry Analytics",
   "main": "index.js",
   "scripts": {
