@@ -21,10 +21,16 @@
 npm install react-native-flurry-analytics --save
 ```
 
-2. Inside your code include JS part by adding
+2. Link native part
 
 ```javascript
-  import FlurryAnalytics from 'react-native-flurry-analytics';
+react-native link react-native-flurry-analytics
+```
+
+3. Inside your code include JS part by adding
+
+```javascript
+import FlurryAnalytics from 'react-native-flurry-analytics';
 ```
 
 ### iOS
