@@ -1,0 +1,40 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:2.1.2'
+  }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion "23.0.3"
+
+  defaultConfig {
+    minSdkVersion 16
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
+
+repositories {
+  mavenLocal()
+  maven {
+    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+    url "$projectDir/../../../node_modules/react-native/android"
+  }
+  mavenCentral()
+}
+
+dependencies {
+  compile 'com.facebook.react:react-native:+'
+  compile 'com.flurry.android:analytics:6.4.2'
+}

@@ -1,0 +1,5 @@
+example
+android/build
+ios/build
+*.iml
+images

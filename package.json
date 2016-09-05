@@ -1,0 +1,32 @@
+{
+  "name": "react-native-flurry-analytics",
+  "version": "1.0.0",
+  "description": "React Native wrapper for Flurry Analytics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxsnakerxx/react-native-flurry-analytics.git"
+  },
+  "keywords": [
+    "react-native",
+    "module",
+    "flurry",
+    "ios",
+    "android",
+    "analytics",
+    "native"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.4.0"
+  },
+  "author": "Dmitriy Kolesnikov <xxsnakerxx@gmail.com> (https://github.com/xxsnakerxx)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xxsnakerxx/react-native-flurry-analytics/issues"
+  },
+  "homepage": "https://github.com/xxsnakerxx/react-native-flurry-analytics#readme"
+}
