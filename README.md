@@ -36,7 +36,7 @@ import FlurryAnalytics from 'react-native-flurry-analytics';
 ### iOS
 
 ```bash
-sudo gem install cocoapods 
+sudo gem install cocoapods
 cd ios
 pod init
 open Podfile
@@ -45,7 +45,7 @@ open Podfile
 Add this line
 
 ```
-pod Flurry-iOS-SDK/FlurrySDK
+pod 'Flurry-iOS-SDK/FlurrySDK'
 ```
 
 Then run
@@ -60,8 +60,8 @@ Add these lines in `AndroidManifest.xml`
 
 ```xml
 <!-- Required permissions - Internet access -->
-<uses-permission android:name="android.permission.INTERNET" /> 
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> 
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 <!-- Recommended permission - External memory pre-caching -->
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
@@ -91,7 +91,7 @@ FlurryAnalytics.startSession('YOUR_API_KEY');
 __!!!__ method must be called prior to invoking __startSession__
 
 ```javascript
-FlurryAnalytics.setAppVersion('1.0.0'); 
+FlurryAnalytics.setAppVersion('1.0.0');
 ```
 
 #### setDebugLogEnabled(bool enabled)
@@ -112,7 +112,7 @@ FlurryAnalytics.setSessionContinueSeconds(10);
 
 #### setCrashReportingEnabled(bool enabled)
 
-__!!!__ method must be called prior to invoking __startSession
+__!!!__ method must be called prior to invoking __startSession__
 
 ```javascript
 FlurryAnalytics.setCrashReportingEnabled(true);
@@ -150,7 +150,7 @@ FlurryAnalytics.setUserAge(28);
 
 ```javascript
 FlurryAnalytics.setUserGender('m');
-// or 
+// or
 FlurryAnalytics.setUserGender('f');
 ```
 
