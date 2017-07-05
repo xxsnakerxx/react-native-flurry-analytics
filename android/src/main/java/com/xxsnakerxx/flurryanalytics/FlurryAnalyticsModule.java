@@ -1,9 +1,7 @@
 package com.xxsnakerxx.flurryanalytics;
 
 import android.support.annotation.Nullable;
-import android.util.Log;
 
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -103,11 +101,6 @@ public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
       _gender = Constants.FEMALE;
     }
     FlurryAgent.setGender(_gender);
-  }
-
-  @ReactMethod
-  public void setEventLoggingEnabled(boolean enabled) {
-    FlurryAgent.setLogEvents(enabled);
   }
 
   private static Map<String, String> toMap(@Nullable ReadableMap readableMap) {

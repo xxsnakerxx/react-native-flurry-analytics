@@ -134,15 +134,6 @@ export default class FlurryAnalytics {
     RNFlurryAnalytics.setUserGender(gender);
   }
 
-  static setEventLoggingEnabled(enabled = true) {
-    if (startSessionIsCalled) {
-      mustCalledPriorStartSession('setEventLoggingEnabled');
-      return;
-    }
-
-    RNFlurryAnalytics.setEventLoggingEnabled(enabled);
-  }
-
   static mock() {
     const methods = Object.getOwnPropertyNames(FlurryAnalytics);
 

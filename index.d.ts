@@ -22,11 +22,6 @@ declare module 'react-native-flurry-analytics' {
 		setSessionContinueSeconds(seconds: number);
 
 		/**
-		 * !!! method must be called prior to invoking __startSession, e.g.  FlurryAnalytics.setEventLoggingEnabled(true);)
-		 */
-		setEventLoggingEnabled(enabled: boolean);
-
-		/**
 		 * !!! method must be called prior to invoking startSession, e.g. FlurryAnalytics.setCrashReportingEnabled(true);
 		 */
 		setCrashReportingEnabled(enabled: boolean);

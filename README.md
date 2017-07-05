@@ -154,14 +154,6 @@ FlurryAnalytics.setUserGender('m');
 FlurryAnalytics.setUserGender('f');
 ```
 
-#### setEventLoggingEnabled(bool enabled)
-
-__!!!__ method must be called prior to invoking __startSession
-
-```javascript
-FlurryAnalytics.setEventLoggingEnabled(true);
-```
-
 ### For more information read official docs [iOS](http://flurry.github.io/flurry-ios-sdk/) [Android](http://flurry.github.io/flurry-android-sdk/)
 
 ## Contributing

@@ -4,7 +4,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.1.2'
+    classpath 'com.android.tools.build:gradle:2.2.0'
   }
 }
 
@@ -32,9 +32,10 @@ repositories {
     url "$projectDir/../../../node_modules/react-native/android"
   }
   mavenCentral()
+  jcenter()
 }
 
 dependencies {
   compile 'com.facebook.react:react-native:+'
-  compile 'com.flurry.android:analytics:+'
+  compile 'com.flurry.android:analytics:+@aar'
 }

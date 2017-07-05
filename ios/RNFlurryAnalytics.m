@@ -1,33 +1,43 @@
 #import "RNFlurryAnalytics.h"
 #import <Flurry.h>
 
-@implementation RNFlurryAnalytics
+@implementation RNFlurryAnalytics {
+  FlurrySessionBuilder *sessionBuilder;
+}
+
+- (instancetype)init {
+  self = [super init];
+  
+  sessionBuilder = [FlurrySessionBuilder new];
+  
+  return self;
+}
 
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(startSession:(NSString *)apiKey)
 {
-  [Flurry startSession:apiKey];
+  [Flurry startSession:apiKey withSessionBuilder:sessionBuilder];
 }
 
 RCT_EXPORT_METHOD(setAppVersion:(NSString *)version)
 {
-	[Flurry setAppVersion:version];
+  [sessionBuilder withAppVersion:version];
 }
 
 RCT_EXPORT_METHOD(setDebugLogEnabled:(BOOL)enabled)
 {
-	[Flurry setDebugLogEnabled:enabled];
+  [Flurry setLogLevel:enabled ? FlurryLogLevelAll : FlurryLogLevelCriticalOnly];
 }
 
 RCT_EXPORT_METHOD(setSessionContinueSeconds:(int)seconds)
 {
-	[Flurry setSessionContinueSeconds:seconds];
+  [sessionBuilder withSessionContinueSeconds:seconds];
 }
 
 RCT_EXPORT_METHOD(setCrashReportingEnabled:(BOOL)enabled)
 {
-	[Flurry setCrashReportingEnabled:enabled];
+  [sessionBuilder withCrashReporting:enabled];
 }
 
 RCT_EXPORT_METHOD(logEvent:(NSString *)eventName timed:(BOOL)timed)
@@ -61,11 +71,6 @@ RCT_EXPORT_METHOD(setUserAge:(int)age)
 RCT_EXPORT_METHOD(setUserGender:(NSString *)gender)
 {
 	[Flurry setGender:gender];
-}
-
-RCT_EXPORT_METHOD(setEventLoggingEnabled:(BOOL)enabled)
-{
-	[Flurry setEventLoggingEnabled:enabled];
 }
 
 @end
