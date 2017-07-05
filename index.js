@@ -107,6 +107,10 @@ export default class FlurryAnalytics {
     RNFlurryAnalytics.endTimedEvent(eventName, params);
   }
 
+  static logPageView() {
+    RNFlurryAnalytics.logPageView();
+  }
+
   static setUserId(userId) {
     if (!userId || typeof userId !== 'string') {
       console.error(`FlurryAnalytics.setUserId: userId must be a string. Got ${userId}`);

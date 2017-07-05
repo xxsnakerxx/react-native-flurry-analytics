@@ -37,6 +37,11 @@ declare module 'react-native-flurry-analytics' {
 		endTimedEvent(eventName: string, params?: any);
 
 		/**
+		 * e.g. FlurryAnalytics.logPageView();
+		 */
+		logPageView();
+
+		/**
 		 * e.g. FlurryAnalytics.setUserId('userId');
 		 */
 		setUserId(userId: string);

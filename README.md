@@ -134,6 +134,12 @@ FlurryAnalytics.endTimedEvent('eventName');
 FlurryAnalytics.endTimedEvent('eventName', {param: 'true'});
 ```
 
+#### logPageView()
+
+```javascript
+FlurryAnalytics.logPageView();
+```
+
 ### setUserId(string userId)
 
 ```javascript

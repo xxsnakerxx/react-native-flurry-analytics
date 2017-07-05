@@ -83,6 +83,11 @@ public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void logPageView() {
+    FlurryAgent.onPageView();
+  }
+
+  @ReactMethod
   public void setUserID(String userID) {
     FlurryAgent.setUserId(userID);
   }

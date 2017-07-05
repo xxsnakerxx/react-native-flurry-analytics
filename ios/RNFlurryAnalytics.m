@@ -58,6 +58,11 @@ RCT_EXPORT_METHOD(endTimedEvent:(NSString *)eventName
 	[Flurry endTimedEvent:eventName withParameters:parameters];
 }
 
+RCT_EXPORT_METHOD(logPageView)
+{
+  [Flurry logPageView];
+}
+
 RCT_EXPORT_METHOD(setUserID:(NSString *)userID)
 {
 	[Flurry setUserID:userID];
