@@ -105,6 +105,11 @@ Add following to `android/app/proguard-rules.pro`
 FlurryAnalytics.startSession('YOUR_API_KEY');
 ```
 
+#### endSession()
+```javascript
+FlurryAnalytics.endSession();
+```
+
 #### setAppVersion(string version)
 
 __!!!__ method must be called prior to invoking __startSession__

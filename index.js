@@ -27,6 +27,12 @@ export default class FlurryAnalytics {
     startSessionIsCalled = true;
   }
 
+  static endSession() {
+    if (startSessionIsCalled) {
+      startSessionIsCalled = false;
+    }
+  }
+
   static setAppVersion(version = '1.0') {
     if (startSessionIsCalled) {
       mustCalledPriorStartSession('setAppVersion');
