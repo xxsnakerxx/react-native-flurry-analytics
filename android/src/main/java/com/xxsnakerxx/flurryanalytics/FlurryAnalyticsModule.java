@@ -40,7 +40,7 @@ public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
               @Override
               public void onSessionStarted() {}
             })
-            .build(getCurrentActivity(), apiKey);
+            .build(getReactApplicationContext(), apiKey);
   }
 
   @ReactMethod
