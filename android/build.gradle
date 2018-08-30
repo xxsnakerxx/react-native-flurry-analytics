@@ -12,7 +12,7 @@ apply plugin: 'com.android.library'
 
 android {
   compileSdkVersion 23
-  buildToolsVersion "23.0.3"
+  buildToolsVersion '27.0.3'
 
   defaultConfig {
     minSdkVersion 16
@@ -36,6 +36,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.facebook.react:react-native:+'
-  compile 'com.flurry.android:analytics:7.0.0@aar'
+  implementation 'com.facebook.react:react-native:+'
+  implementation 'com.flurry.android:marketing:11.2.0@aar'
+  implementation 'com.flurry.android:analytics:11.2.0@aar'
 }

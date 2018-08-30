@@ -14,13 +14,21 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.flurry.android.marketing.FlurryMarketingOptions;
+
 public class FlurryAnalyticsPackage implements ReactPackage {
+    private FlurryMarketingOptions flurryMessagingOptions = null;
+
+    public FlurryAnalyticsPackage(FlurryMarketingOptions option){
+        flurryMessagingOptions = option;
+    }
+
     @Override
     public List<NativeModule> createNativeModules(
             ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
 
-        modules.add(new FlurryAnalyticsModule(reactContext));
+        modules.add(new FlurryAnalyticsModule(reactContext, flurryMessagingOptions));
 
         return modules;
     }

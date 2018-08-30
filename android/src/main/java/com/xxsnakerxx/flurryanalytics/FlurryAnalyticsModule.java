@@ -15,7 +15,9 @@ import com.flurry.android.Constants;
 import com.flurry.android.FlurryAgent;
 import com.flurry.android.FlurryAgent.Builder;
 import com.flurry.android.FlurryAgentListener;
-
+import com.flurry.android.marketing.FlurryMarketingOptions;
+import com.flurry.android.marketing.FlurryMarketingModule;
+;
 public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
 
   public static final String REACT_CLASS = "RNFlurryAnalytics";
@@ -27,10 +29,14 @@ public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
     return REACT_CLASS;
   }
 
-  public FlurryAnalyticsModule(ReactApplicationContext reactContext) {
+  public FlurryAnalyticsModule(ReactApplicationContext reactContext, FlurryMarketingOptions options) {
     super(reactContext);
 
     mFlurryAgentBuilder = new FlurryAgent.Builder();
+    if (options != null){
+      FlurryMarketingModule marketingModule = new FlurryMarketingModule(options);
+      mFlurryAgentBuilder.withModule(marketingModule);
+    }
   }
 
   @ReactMethod
@@ -40,7 +46,7 @@ public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
               @Override
               public void onSessionStarted() {}
             })
-            .build(getCurrentActivity(), apiKey);
+            .build(getReactApplicationContext(), apiKey);
   }
 
   @ReactMethod
