@@ -13,6 +13,11 @@
   return self;
 }
 
++(BOOL)requiresMainQueueSetup
+	{
+	  return YES;
+	}
+
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(startSession:(NSString *)apiKey)
