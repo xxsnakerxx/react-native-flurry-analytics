@@ -7,6 +7,11 @@ declare module 'react-native-flurry-analytics' {
 		startSession(apiKey: string);
 
 		/**
+		 * FlurryAnalytics.endSession();
+		 */
+		endSession();
+
+		/**
 		 * !!! method must be called prior to invoking startSession, e.g. FlurryAnalytics.setAppVersion('1.0.0');
 		 */
 		setAppVersion(version: string);
