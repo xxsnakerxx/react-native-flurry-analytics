@@ -5,11 +5,16 @@
   FlurrySessionBuilder *sessionBuilder;
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+  return YES;
+}
+
 - (instancetype)init {
   self = [super init];
-  
+
   sessionBuilder = [FlurrySessionBuilder new];
-  
+
   return self;
 }
 
