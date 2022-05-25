@@ -36,6 +36,6 @@ repositories {
 }
 
 dependencies {
-  compile 'com.facebook.react:react-native:+'
-  compile 'com.flurry.android:analytics:7.0.0@aar'
+  implementation 'com.facebook.react:react-native:+'
+  implementation 'com.flurry.android:analytics:7.0.0@aar'
 }
